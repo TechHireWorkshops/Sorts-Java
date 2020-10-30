@@ -4,21 +4,21 @@ class QuickSort {
 
   int partition(int arr[], int low, int high) {
     int pivot = arr[high];
-    int i = (low - 1);
+    int i = low;
     for (int j = low; j < high; j++) {
       if (arr[j] < pivot) {
-        i++;
         int temp = arr[i];
         arr[i] = arr[j];
         arr[j] = temp;
+        i++;
       }
     }
 
-    int temp = arr[i + 1];
-    arr[i + 1] = arr[high];
+    int temp = arr[i];
+    arr[i] = arr[high];
     arr[high] = temp;
 
-    return i + 1;
+    return i;
   }
 
   void sort(int[] arr, int low, int high) {

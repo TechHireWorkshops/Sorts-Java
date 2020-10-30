@@ -37,8 +37,13 @@ public class BucketSort {
 
   // Driver code
   public static void main(String[] args) {
+    long startTime = System.nanoTime();
+
     BucketSort b = new BucketSort();
-    Integer[] arr = { 5, 8, 1, 6, 2, 6, 1, 0, 5, 2, 3 };
+    Integer[] arr = { 5, 8, 1, 6, 2, 6, 1, 0, 5, 2, 3, 10000000 };
     b.bucketSort(arr, 2);
+    long endTime = System.nanoTime();
+    long duration = (endTime - startTime);
+    System.out.println(duration);
   }
 }
